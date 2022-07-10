@@ -55,7 +55,7 @@ function updateTasks() {
     newTask.addEventListener("click", (e) => {
       // Check that the newTask element is the target and not its children
       if (e.target === newTask) {
-        task.focus = task.focus ? false : true; // Toggle the focus
+        task.focus = !task.focus; // Toggle the focus
         updateTasks(); // Update the UI
       }
     });
